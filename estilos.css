@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #9c8106, #f7c215, #f8e965, #9c7905);
+    background-size: 400% 400%;
+    animation: fondoAnimado 15s ease infinite;
+    color: #333;
+  }
+  
+  @keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  header {
+    font-size: 25px;
+    text-align: center;
+    padding: 2rem;
+    color: rgb(27, 15, 15);
+    text-shadow: 1px 1px #8a8049;
+
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: solid;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: yellow;
+  }
+  
+  section {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  ul li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .galeria img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .redes {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .redes a {
+    display: inline-block;
+    margin: 0.5rem;
+    color: #fff;
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+  }
+  
+  .redes a:hover {
+    background-color: #ff4081;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  #diseños {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+  
+  .diseños-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .diseño {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .diseño img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .diseño:hover {
+    transform: scale(1.05);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  @keyframes zoom {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 1rem;
+    animation: zoom 0.5s ease;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  
+  
+  .cerrar {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50%;
+  }
+  
+  .cerrar:hover {
+    background: rgba(255, 0, 0, 0.6);
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  
+  #descripcionImagen {
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  

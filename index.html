@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphic Studio - Diseños Creativos</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="logo (2).png" />
+</head>
+<body>
+  <header>
+    <h1>Graphic Studio</h1>
+    <p>Tu mundo de diseño en un solo lugar</p>
+  </header>
+
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#diseños">Ver Diseños</a> <!-- Nuevo botón -->
+    <a href="#contacto">Contacto</a>
+  </nav>
+  
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li>🎨 Diseño gráfico profesional</li>
+      <li>👕 T-shirts personalizados</li>
+      <li>🪧 Letreros creativos</li>
+      <li>📃 Afiches impactantes</li>
+      <li>🎟️ Boletas y entradas</li>
+    </ul>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de Diseños</h2>
+    <div class="galeria">
+      <img src="afiche.png" alt="Diseño 1" />
+      <img src="termo.png" alt="Diseño 2" />
+      <img src="valla.png" alt="Diseño 3" />
+    </div>
+  </section>
+
+  <section id="diseños">
+    <h2>Diseños de Graphic Studio</h2>
+    <div class="diseños-grid">
+      <div class="diseño" onclick="abrirModal('tisher.png', 'T-shirt personalizable #1')">
+        <img src="tisher.png" alt="Diseño T-shirt 1" />
+        <p>T-shirt personalizable #1</p>
+      </div>
+      
+      <div class="diseño" onclick="abrirModal('tisher 2.png', 'T-shirt personalizable #2')">
+        <img src="tisher 2.png" alt="Diseño T-shirt 2" />
+        <p>T-shirt personalizable #2</p>
+      </div>
+      
+      <div class="diseño" onclick="abrirModal('tisher 3.png', 'T-shirt personalizable #3')">
+        <img src="tisher 3.png" alt="Diseño T-shirt 3" />
+        <p>T-shirt personalizable #3</p>
+      </div>
+      
+    </div>
+  </section>
+  
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Teléfono:</strong>1+ (829)-974-4487</p>
+    <p><strong>Email:</strong> info@graphicstudio.com</p>
+    <p><strong>Dirección:</strong> Rep.Dom, Santiago, Villa González, Plaza Raymon modulo 2, av fermin</p>
+    <div class="redes">
+      <a href="https://www.instagram.com/graphic_studio_20?igsh=MXc1bWttajRtcXczbg==" target="_blank"> Instagram</a>
+      <a href="https://www.facebook.com/" target="_blank"> Facebook</a>
+      <a href="https://wa.me/8299744487" target="_blank"> WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Graphic Studio. Todos los derechos reservados.</p>
+  </footer>
+  <!-- Modal para ver diseño ampliado -->
+  <div id="modal" class="modal">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <img class="modal-contenido" id="imagenAmpliada" />
+    <p id="descripcionImagen"></p>
+  </div>
+  
+  <script>
+    function abrirModal(imagenSrc, descripcion) {
+      const modal = document.getElementById("modal");
+      const imagen = document.getElementById("imagenAmpliada");
+      const texto = document.getElementById("descripcionImagen");
+    
+      imagen.src = imagenSrc;
+      texto.textContent = descripcion;
+      modal.style.display = "block";
+    }
+    
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    }
+    </script>
+    
+    
+</body>
+</html>
